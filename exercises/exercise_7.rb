@@ -5,8 +5,15 @@ require_relative './exercise_3'
 require_relative './exercise_4'
 require_relative './exercise_5'
 require_relative './exercise_6'
-
+puts""
 puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+puts "New store name?"
+new_name = gets.chomp
+
+new_store = Store.create(name: new_name)
+
+puts new_store.persisted?
+puts new_store.errors.messages
